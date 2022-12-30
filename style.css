@@ -225,6 +225,68 @@
 }
 /* end of collection */
 
+/* start of popular localities section */
+
+.localities {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.localities h1,
+.explore__container h1 {
+  font-size: 32px;
+  font-weight: 350;
+}
+
+.localities__container_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin: auto;
+  padding: 16px 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.localities_container {
+  width: 100%;
+  height: auto;
+}
+
+.localities_container div {
+  flex-direction: column;
+  width: 350px;
+  height: 80px;
+  padding: 16px 16px;
+  border: 0.5px solid rgb(231, 228, 228);
+  box-shadow: 1px 1px rgb(227, 227, 227);
+  gap: 10px;
+  border-radius: 5px;
+  margin: 16px 16px;
+  transition-duration: all 300ms ease-out;
+}
+
+.localities_container div:hover,
+.explore__options div:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px rgb(222, 219, 219);
+}
+
+.localities_container span,
+.explore__options div {
+  font-size: 18px;
+  font-weight: 350;
+  letter-spacing: 1px;
+}
+
+.localities_container .places {
+  font-size: 15px;
+  font-weight: 200;
+}
+/* end of popular localities section */
+
 /* start of get app section */
 
 .get__the_app {
@@ -339,6 +401,28 @@
 }
 
 /* end of get app section */
+
+/* start of explore options section */
+
+.explore__container h1 {
+  padding-left: 12px;
+}
+
+.explore__options div {
+  flex-direction: column;
+  width: 100%;
+  height: 70px;
+  padding: 16px 16px;
+  border: 0.5px solid rgb(231, 228, 228);
+  gap: 10px;
+  border-radius: 5px;
+  margin: 16px 16px;
+  justify-content: center;
+  align-items: center;
+  transition-duration: all 300ms ease-out;
+}
+
+/* end of explore options section */
 
 /* start of footer section */
 
@@ -557,5 +641,37 @@
   .footer_section1 {
     flex-direction: column;
     gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .localities__container_grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+  }
+
+  .localities_container div {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .left {
+    display: none;
+  }
+
+  .localities__container_grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .explore__container div {
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  .explore__container h1 {
+    font-size: 22px;
+    font-weight: 400;
   }
 }
